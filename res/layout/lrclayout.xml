@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/RelativeLayout1"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_bg03" >
+
+    <RelativeLayout
+        android:id="@+id/header_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true" >
+
+        <ImageButton
+            android:id="@+id/back_return"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginTop="17dp"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/back_return_normal" />
+
+        <ImageButton
+            android:id="@+id/like"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="17dp"
+            android:layout_alignBaseline="@id/back_return"
+            android:background="@drawable/like" />
+
+        <com.example.Utils.MarqueeTextView
+            android:id="@+id/musicTitle"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_centerHorizontal="true"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_horizontal"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:singleLine="true"
+            android:scrollHorizontally="true"
+            android:text="我是标题"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="#FF7F50"/>
+
+        <TextView
+            android:id="@+id/musicArtist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/musicTitle"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:text="我是标题"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="18sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer_layout"
+        android:layout_below="@+id/header_layout"
+        android:orientation="vertical" >
+
+        <com.example.Utils.LrcView
+            android:id="@+id/lrcShowView"
+            android:layout_width="match_parent"
+            android:layout_height="400dip"
+            />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true" >
+
+        <RelativeLayout
+            android:id="@+id/seekbarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/player_progresslayout_bg" >
+
+            <SeekBar
+                android:id="@+id/audioTrack"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/player_progress_bg"
+                android:progressDrawable="@drawable/seekbar_img"
+                android:thumb="@drawable/media_player_progress_button" />
+
+            <TextView
+                android:id="@+id/current_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/audioTrack"
+                android:textColor="@android:color/white" />
+
+            <TextView
+                android:id="@+id/final_progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/audioTrack"
+                android:textColor="@android:color/white" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relativeLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/seekbarLayout" >
+
+            <Button
+                android:id="@id/play_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/play_selector" />
+
+            <Button
+                android:id="@id/next_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/play_music"
+                android:layout_toRightOf="@+id/play_music"
+                android:background="@drawable/next_music_selector" />
+
+            <Button
+                android:id="@id/previous_music"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/play_music"
+                android:layout_toLeftOf="@+id/play_music"
+                android:background="@drawable/previous_music_selector" />
+
+            <Button
+                android:id="@+id/btn_voice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/next_music"
+                android:layout_toRightOf="@+id/next_music"
+                android:background="@drawable/btn_voice_normal" />
+
+            <ImageButton
+                android:id="@+id/favourite_music_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:background="@drawable/favourite_music_list" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

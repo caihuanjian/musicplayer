@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="menu_bg_focus">#E36699cc</color>
+    <color name="menu_bg_normal">#FF666666</color>
+</resources>

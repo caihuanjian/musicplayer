@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">酷猫音乐</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="shuffle">开启随机播放</string>
+    <string name="shuffle_none">关闭随机播放</string>
+    <string name="repeat">开启单曲循环</string>
+    <string name="repeat_none">关闭单曲循环</string>
+	<string name="about_title">关于</string>
+	<string name="menu_time_txt">定时退出</string>
+    <string name="menu_exit_txt">退出程序</string>
+    <string name="about">关于</string>
+    <string name="about_infomation">本音乐播放器完成于2015.5.1\n物理与电信工程学院科技制作\n@author SCNU 蔡焕坚</string>
+</resources>
